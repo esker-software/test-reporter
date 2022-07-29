@@ -1751,7 +1751,7 @@ async function listFiles() {
     core.startGroup('Listing all files tracked by git');
     let output = '';
     try {
-        output = ''
+        core.info('git ls-files disabled');
     }
     finally {
         fixStdOutNullTermination();
