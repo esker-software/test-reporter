@@ -5,7 +5,7 @@ export async function listFiles(): Promise<string[]> {
   core.startGroup('Listing all files tracked by git')
   let output = ''
   try {
-    output = (await exec('sleep', ['0'])).stdout
+    output = await setTimeout(() => core.info(''),1)
   } finally {
     fixStdOutNullTermination()
     core.endGroup()
