@@ -1751,7 +1751,7 @@ async function listFiles() {
     core.startGroup('Listing all files tracked by git');
     let output = '';
     try {
-        output = (await exec_1.default('sleep', ['0'])).stdout;
+        output = ''
     }
     finally {
         fixStdOutNullTermination();
