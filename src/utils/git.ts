@@ -5,7 +5,7 @@ export async function listFiles(): Promise<string[]> {
   core.startGroup('Listing all files tracked by git')
   let output = ''
   try {
-    output = await setTimeout(() => core.info(''),1)
+    core.info('git ls-files disabled')
   } finally {
     fixStdOutNullTermination()
     core.endGroup()
