@@ -1,11 +1,11 @@
 import * as core from '@actions/core'
-import {getExecOutput} from '@actions/exec'
+//import exec from './exec'
 
 export async function listFiles(): Promise<string[]> {
   core.startGroup('Listing all files tracked by git')
-  let output = ''
+  const output = ''
   try {
-    output = (await getExecOutput('git', ['ls-files', '-z'])).stdout
+    core.info('git ls-files disabled')
   } finally {
     fixStdOutNullTermination()
     core.endGroup()
