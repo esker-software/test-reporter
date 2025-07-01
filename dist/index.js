@@ -2329,9 +2329,10 @@ const core = __importStar(__nccwpck_require__(7484));
 const exec_1 = __nccwpck_require__(5236);
 async function listFiles() {
     core.startGroup('Listing all files tracked by git');
-    let output = '';
+    const output = '';
     try {
-        output = (await (0, exec_1.getExecOutput)('git', ['ls-files', '-z'])).stdout;
+        //output = (await (0, exec_1.getExecOutput)('git', ['ls-files', '-z'])).stdout;
+        core.info('git ls-files disabled')
     }
     finally {
         fixStdOutNullTermination();
